@@ -1,0 +1,61 @@
+<div class="salary-container">
+  <div class="salary-card">
+    <div class="form-header">
+      <h2>Salary Calculation</h2>
+      <p>Enter employee salary details</p>
+    </div>
+
+    <form (ngSubmit)="saveSalary()">
+      <div class="form-group">
+        <label>Employee ID</label>
+        <input
+          type="number"
+          name="employee_id"
+          [(ngModel)]="salary.employee_id"
+          placeholder="Enter employee ID"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Basic Salary</label>
+        <input
+          type="number"
+          name="basic_salary"
+          [(ngModel)]="salary.basic_salary"
+          placeholder="Enter basic salary"
+          required
+        />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>HRA</label>
+          <input type="number" name="hra" [(ngModel)]="salary.hra" placeholder="Enter HRA" />
+        </div>
+
+        <div class="form-group">
+          <label>Allowances</label>
+          <input
+            type="number"
+            name="allowances"
+            [(ngModel)]="salary.allowances"
+            placeholder="Enter allowances"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Deductions</label>
+        <input
+          type="number"
+          name="deductions"
+          [(ngModel)]="salary.deductions"
+          placeholder="Enter deductions"
+        />
+      </div>
+
+      <button type="submit" class="save-btn">Save Salary</button>
+    </form>
+  </div>
+</div>
